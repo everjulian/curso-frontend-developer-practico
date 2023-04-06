@@ -3,7 +3,7 @@ const navEmail = document.querySelector(".navbar-email");
 const desktopMenu = document.querySelector(".desktop-menu");
 const menuHamIcon = document.querySelector(".menu");
 const menuCarritoIcon = document.querySelector(".navbar-shopping-cart");
-const aside = document.querySelector(".product-detail");
+const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
 
 const mobileMenu = document.querySelector(".mobile-menu");
 
@@ -18,7 +18,7 @@ function toggleDesktopMenu(){
     const isasideOpn = aside.classList.contains("inactive")
     // Adtar el menu para que se cierre y abra dependiendo.
     if(!isasideOpn){
-        aside.classList.add("inactive");
+        shoppingCartContainer.classList.add("inactive");
     }
     mobileMenu.classList.toggle("inactive");
  desktopMenu.classList.toggle("inactive");
@@ -27,10 +27,10 @@ function toggleDesktopMenu(){
 // Creacion de  MobileMenu
 function toggleMobileMenu()
 {
-    const isasideOpn = aside.classList.contains("inactive")
+    const isasideOpn = shoppingCartContainer.classList.contains("inactive")
 
     if(!isasideOpn){
-        aside.classList.add("inactive");
+        shoppingCartContainer.classList.add("inactive");
     }
     mobileMenu.classList.toggle("inactive");
 }
@@ -46,7 +46,7 @@ function toggleCarritoAside()
     if(!ismobileMenuOpen){
         mobileMenu.classList.add("inactive");
     }
-    aside.classList.toggle("inactive");
+    shoppingCartContainer.classList.toggle("inactive");
 
 }
 
@@ -77,11 +77,6 @@ producList.push({
     image:"https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 });
 
-producList.push({
-    name:"table",
-    price: 350,
-    image:"https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-});
 
 
 // Indice del array 
