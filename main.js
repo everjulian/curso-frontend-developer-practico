@@ -25,6 +25,7 @@ function toggleDesktopMenu(){
 }
 
 // Creacion de  MobileMenu
+
 function toggleMobileMenu()
 {
     const isasideOpn = shoppingCartContainer.classList.contains("inactive")
